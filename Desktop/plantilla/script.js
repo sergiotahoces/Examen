@@ -13,12 +13,49 @@ function fetchData(url, callBack) {
 }
 
 
-function showFilms(response) {
+function showUsers(response) {
     console.log(response);
-    const movies = response.results;
+    const usersWeb = response.results;
+  
 
-    for (let i = 0; i < movies.length; i++) {
-        ulListFilms.innerHTML += ``
+    for (let i = 0; i < usersWeb.length; i++) {
+        ulListUsers.innerHTML += `<div class="container-fluid">
+        <div class="row" id="home">
+          <div class="col-5 col-md-12" id="user">
+            <div class="img">
+              <a>
+                <img src="${usersWeb[i].picture.large}" alt="">
+              </a>
+            </div>
+            <div class="Name">
+              <a>
+                ${usersWeb[i].name.title}
+                ${usersWeb[i].name.first}
+                ${usersWeb[i].name.last}
+              </a>
+            </div>
+            <div class="info" >
+                ${usersWeb[i].phone}
+            </div>
+            <div class="mail">
+                ${usersWeb[i].email}
+            </div>
+            <div>
+                ${usersWeb[i].dob.date.substring(0,10)}
+            </div>
+            <div>
+                ${usersWeb[i].location.postcode},
+                ${usersWeb[i].location.street},
+                ${usersWeb[i].location.city},
+                ${usersWeb[i].location.state}
+
+            </div>
+
+            
+            
+          </div>
+        </div>
+      </div>`
     }
 }
 
