@@ -19,14 +19,16 @@ function showUsers(response) {
   
 
     for (let i = 0; i < usersWeb.length; i++) {
-        ulListUsers.innerHTML += `<div class="container-fluid">
+        ulListUsers.innerHTML += `<div class="container-fluid all">
         <div class="row" id="home">
-          <div class="col-5 col-md-12" id="user">
+          <div class="col-5 col-md-5" id="user">
             <div class="img">
               <a>
-                <img src="${usersWeb[i].picture.large}" alt="">
+                <img src="${usersWeb[i].picture.large}" class="img">
               </a>
             </div>
+        </div>
+        <div class="Information">
             <div class="Name">
               <a>
                 ${usersWeb[i].name.title}
@@ -34,16 +36,21 @@ function showUsers(response) {
                 ${usersWeb[i].name.last}
               </a>
             </div>
-            <div class="info" >
+            <div class="info fas fa-phone-square-alt" >
+            <i class="fas fa-phone"></i>
                 ${usersWeb[i].phone}
             </div>
             <div class="mail">
+            <i class="fas fa-envelope"></i>
                 ${usersWeb[i].email}
             </div>
             <div>
-                ${usersWeb[i].dob.date.substring(0,10)}
+            <i class="fas fa-birthday-cake"></i>
+                ${usersWeb[i].dob.date.substring(8,10)}-${usersWeb[i].dob.date.substring(5,7)}-${usersWeb[i].dob.date.substring(0,4)}
+
             </div>
             <div>
+            <i class="fas fa-map"></i>
                 ${usersWeb[i].location.postcode},
                 ${usersWeb[i].location.street},
                 ${usersWeb[i].location.city},

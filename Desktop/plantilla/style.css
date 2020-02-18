@@ -1,8 +1,11 @@
 .img{
     display: flex;  
-    
+    width: 300px;
 }
 .about{
     display: flex;
     flex-direction: column;
+}
+.Information{
+    padding-top: 5%;
 }
