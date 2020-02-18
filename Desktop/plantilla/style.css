@@ -1,6 +1,8 @@
 .img{
     display: flex;  
     width: 300px;
+    padding-left: 5%;
+    padding-bottom: 5%;
 }
 .about{
     display: flex;
@@ -8,4 +10,14 @@
 }
 .Information{
     padding-top: 5%;
+}
+.Name{
+    font-weight: bold;
+    padding-left: 20%;
+}
+.user{
+    padding-bottom: 10%;
+}
+.adress{
+    padding-right: 5%;
 }

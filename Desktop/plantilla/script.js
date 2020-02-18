@@ -49,10 +49,11 @@ function showUsers(response) {
                 ${usersWeb[i].dob.date.substring(8,10)}-${usersWeb[i].dob.date.substring(5,7)}-${usersWeb[i].dob.date.substring(0,4)}
 
             </div>
-            <div>
+            <div class="adress">
             <i class="fas fa-map"></i>
                 ${usersWeb[i].location.postcode},
-                ${usersWeb[i].location.street},
+                ${usersWeb[i].location.street.number}
+                ${usersWeb[i].location.street.name},
                 ${usersWeb[i].location.city},
                 ${usersWeb[i].location.state}
 
